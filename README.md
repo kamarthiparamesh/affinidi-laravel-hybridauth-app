@@ -78,3 +78,12 @@ Open the downloaded directory `affinidi-laravel-hybridauth-app` in VS code or yo
     **Important**: You might error on redirect URL mismatch if you are using `http://127.0.0.1:8000/` instead of `http://localhost:8000/`. 
 7. Click on `Affinidi Login` button to initiate OAuth2 login flow with Affinidi Vault
 
+
+
+## Important Snippets
+
+1. Config file for Affinidi provider settings, check here [hybridauth.php](config/hybridauth.php)
+
+2. Added custom provider for Hybrid Auth, check here [AffinidiProvider.php](/app/Providers/AffinidiProvider.php)
+
+3. Check [LoginRegisterController.php](app\Http\Controllers\LoginRegisterController.php) class for initiate login, callback and logout.
