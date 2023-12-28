@@ -86,4 +86,4 @@ Open the downloaded directory `affinidi-laravel-hybridauth-app` in VS code or yo
 
 2. Added custom provider for Hybrid Auth, check here [AffinidiProvider.php](/app/Providers/AffinidiProvider.php)
 
-3. Check [LoginRegisterController.php](app\Http\Controllers\LoginRegisterController.php) class for initiate login, callback and logout.
+3. Check [LoginRegisterController.php](app/Http/Controllers/LoginRegisterController.php) class for Initiate login, Callback and Logout.
