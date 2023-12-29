@@ -3,8 +3,6 @@
 namespace App\Providers;
 
 use Hybridauth\Adapter\OAuth2;
-use Hybridauth\Exception;
-use Hybridauth\Exception\UnexpectedValueException;
 use Hybridauth\Data;
 use Hybridauth\User;
 
@@ -69,22 +67,22 @@ class AffinidiProvider extends OAuth2
         $data = $this->extractUser($id_token);
 
         // Below is user profile object from hybridauth
-        // $collection = new Data\Collection($data);
-        // $userProfile = new User\Profile();
-        // $userProfile->identifier = $collection->get('did');
-        // $userProfile->email = $collection->get('email');
-        // $userProfile->firstName = $collection->get('givenName');
-        // $userProfile->lastName = $collection->get('familyName');
-        // $userProfile->displayName = $collection->get('givenName') . ' ' . $collection->get('familyName');
-        // $userProfile->profileURL = $collection->get('picture');
-        // $userProfile->gender = $collection->get('gender');
-        // $userProfile->phone = $collection->get('phoneNumber');
-        // $userProfile->address = $collection->get('formatted');
-        // $userProfile->country = $collection->get('country');
-        // $userProfile->city = $collection->get('locality');
-        // $userProfile->zip = $collection->get('postalCode');
+        $collection = new Data\Collection($data);
+        $userProfile = new User\Profile();
+        $userProfile->identifier = $collection->get('did');
+        $userProfile->email = $collection->get('email');
+        $userProfile->firstName = $collection->get('givenName');
+        $userProfile->lastName = $collection->get('familyName');
+        $userProfile->displayName = $collection->get('givenName') . ' ' . $collection->get('familyName');
+        $userProfile->profileURL = $collection->get('picture');
+        $userProfile->gender = $collection->get('gender');
+        $userProfile->phone = $collection->get('phoneNumber');
+        $userProfile->address = $collection->get('formatted');
+        $userProfile->country = $collection->get('country');
+        $userProfile->city = $collection->get('locality');
+        $userProfile->zip = $collection->get('postalCode');
 
-        return $data;
+        return $userProfile;
     }
 
     protected function validateAccessTokenExchange($response)

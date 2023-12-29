@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Laravel</title>
+    <title>Laravel - HybridAuth</title>
 </head>
 <style>
     body {
@@ -17,7 +17,7 @@
 
 <body>
     <h1 class="alert-success">Congratulations, your login was successful!</h1>
-    <h3>Welcome <i>{{ session("user")['email'] }}</i></h3>
+    <h3>Welcome <i>{{ session("user")->email }}</i></h3>
     <a class="btn btn-outline-primary" href="/logout" style="width: 100%; text-decoration: none; font-weight: bold;">
         Logout
     </a>
