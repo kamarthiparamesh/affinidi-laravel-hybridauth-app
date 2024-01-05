@@ -63,7 +63,7 @@
         @endif
         <div class="affinidi-login-div">
             <a  href="/login/affinidi">
-                <img alt="logo affinidi" width="40" height="40" src="/images/affinidi-social.png"
+                <img alt="logo affinidi" width="40" height="40" src="/images/affinidi-social.svg"
                     crossorigin="anonymous" />
             </a>
 
